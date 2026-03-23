@@ -1,5 +1,5 @@
 export default async function handler(req, res) {
-  res.setHeader("Access-Control-Allow-Origin", "https://buyhemp.online");
+  res.setHeader("Access-Control-Allow-Origin", "http://buyhemp.site");
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
 
@@ -35,9 +35,9 @@ export default async function handler(req, res) {
         price_currency: "usd",
         order_id: orderId + "-" + Date.now(),
         order_description: "buyhemp Order Payment",
-        ipn_callback_url: "https://buy-hemp-online.vercel.app/api/webhook",
-        success_url: "https://buyhemp.online/payment-success",
-        cancel_url: "https://buyhemp.online/payment-failed",
+        ipn_callback_url: "https://buy-hemp-site.vercel.app/api/webhook",
+        success_url: "https://buyhemp.site/payment-success",
+        cancel_url: "https://buyhemp.site/payment-failed",
         is_fixed_rate: true
       })
     });
